@@ -50,8 +50,8 @@ const theme = extendTheme(
 			},
 		},
 		fonts: {
-			heading: `Montserrat, ${base.fonts?.heading}`,
-			body: `Inter ${base.fonts?.body}`,
+			heading: `'M PLUS Rounded 1c', Montserrat, ${base.fonts?.heading}`,
+			body: `'M PLUS Rounded 1c', Inter ${base.fonts?.body}`,
 		},
 		components: {
 			Button: {
