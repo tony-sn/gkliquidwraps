@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
 					colorScheme={useColorModeValue("orange", "purple")}
 					icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
 					onClick={toggleColorMode}
-				></IconButton>
+				/>
 			</motion.div>
 		</AnimatePresence>
 	);

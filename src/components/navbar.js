@@ -83,10 +83,30 @@ const Navbar = (props) => {
 						<Menu>
 							<MenuButton
 								as={IconButton}
-								icon={HamburgerIcon}
+								icon={<HamburgerIcon />}
 								variant="outline"
 								aria-label="Menu Options"
 							/>
+							<MenuList>
+								<NextLink href="/" passHref>
+									<MenuItem as={Link}>Home</MenuItem>
+								</NextLink>
+								<NextLink href="/care" passHref>
+									<MenuItem as={Link}>Care</MenuItem>
+								</NextLink>
+								<NextLink href="/gallery" passHref>
+									<MenuItem as={Link}>Gallery</MenuItem>
+								</NextLink>
+								<NextLink href="/colours" passHref>
+									<MenuItem as={Link}>Colours</MenuItem>
+								</NextLink>
+								<NextLink href="/pricing" passHref>
+									<MenuItem as={Link}>Pricing</MenuItem>
+								</NextLink>
+								<NextLink href="/contact" passHref>
+									<MenuItem as={Link}>Contact</MenuItem>
+								</NextLink>
+							</MenuList>
 						</Menu>
 					</Box>
 					<ThemeSwitcher />
