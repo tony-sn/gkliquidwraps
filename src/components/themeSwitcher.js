@@ -2,6 +2,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
+// TODO: when hamburger icon appear, display theme toggler = none, instead add to menu list activate theme
+
 const ThemeSwitcher = () => {
 	const { toggleColorMode } = useColorMode();
 

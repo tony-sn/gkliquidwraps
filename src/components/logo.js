@@ -36,8 +36,7 @@ const Logo = () => {
 						fontWeight="bold"
 						ml={3}
 					>
-						<span style={{ textTransform: "uppercase" }}>GK Liquid Wraps</span>{" "}
-						- The professional liquid wraps you can trust
+						<span style={{ textTransform: "uppercase" }}>GK Liquid Wraps</span>
 					</Text>
 				</LogoBox>
 			</a>

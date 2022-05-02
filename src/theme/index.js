@@ -33,9 +33,28 @@ const brandRing = {
 	},
 };
 
+const config = {
+	initialColorMode: "light",
+	useSystemColorMode: false,
+};
+
+const styles = {
+	global: (props) => ({
+		body: {
+			bg: mode("#f0e7db", "#202023")(props),
+		},
+	}),
+};
+
+const colors = {
+	glassTeal: "#88ccca",
+};
+
 const theme = extendTheme(
 	{
-		config: { initialColorMode: "light", useSystemColorMode: false },
+		colors,
+		styles,
+		config,
 		colors: {
 			brand: {
 				50: "#f5fee5",
@@ -82,6 +101,25 @@ const theme = extendTheme(
 						...brandRing,
 					},
 				},
+			},
+			Heading: {
+				variants: {
+					"section-title": {
+						textDecoration: "underline",
+						fontSize: 20,
+						textUnderlineOffset: 6,
+						textDecorationColor: "#525252",
+						textDecorationThickness: 4,
+						marginTop: 3,
+						marginBottom: 4,
+					},
+				},
+			},
+			Link: {
+				baseStyle: (props) => ({
+					color: mode("#3d7aed", "#ff63c3")(props),
+					textUnderlineOffset: 3,
+				}),
 			},
 		},
 	},

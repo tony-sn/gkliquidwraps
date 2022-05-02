@@ -5,6 +5,7 @@ import {
 	Heading,
 	Stack,
 	Flex,
+	useColorMode,
 	useColorModeValue,
 	Link,
 	Menu,
@@ -36,6 +37,7 @@ const LinkItem = ({ href, path, children }) => {
 
 const Navbar = (props) => {
 	const { path } = props;
+	const { toggleColorMode } = useColorMode();
 
 	return (
 		<Box
@@ -79,6 +81,10 @@ const Navbar = (props) => {
 				</Stack>
 
 				<Box flex={1} align="right">
+					<Box display={{ base: "none", md: "inline-block" }}>
+						<ThemeSwitcher />
+					</Box>
+
 					<Box ml={2} display={{ base: "inline-block", md: "none" }}>
 						<Menu>
 							<MenuButton
@@ -106,10 +112,12 @@ const Navbar = (props) => {
 								<NextLink href="/contact" passHref>
 									<MenuItem as={Link}>Contact</MenuItem>
 								</NextLink>
+								<MenuItem onClick={toggleColorMode}>
+									{`Activate ${useColorModeValue("Dark", "Light")} Theme`}
+								</MenuItem>
 							</MenuList>
 						</Menu>
 					</Box>
-					<ThemeSwitcher />
 				</Box>
 			</Container>
 		</Box>

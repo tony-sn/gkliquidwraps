@@ -34,7 +34,17 @@ export default function Home() {
 			</main> */}
 
 			<Layout>
-				<Container maxW="container.xl"></Container>
+				<Container maxW="container.xl">
+					<Box
+						borderRadius="lg"
+						bg={useColorModeValue("#88ccca", "red")}
+						p={3}
+						my={6}
+						textAlign="center"
+					>
+						<strong>The professional liquid wraps you can trust</strong>
+					</Box>
+				</Container>
 			</Layout>
 		</div>
 	);
