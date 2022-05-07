@@ -1,0 +1,8 @@
+.menuButton {
+	border: none !important;
+	background: none;
+}
+
+.menuButton:focus {
+	outline: 0 !important;
+}

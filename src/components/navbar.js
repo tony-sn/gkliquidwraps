@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import NextLink from "next/link";
 import {
 	Container,
@@ -14,10 +16,11 @@ import {
 	MenuButton,
 	IconButton,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
 
 import Logo from "./logo";
 import ThemeSwitcher from "./themeSwitcher";
+import AnimatedMenuButton from "./menuButton";
+import styles from "@styles/Button";
 
 const LinkItem = ({ href, path, children }) => {
 	const active = path === href;
@@ -38,6 +41,7 @@ const LinkItem = ({ href, path, children }) => {
 const Navbar = (props) => {
 	const { path } = props;
 	const { toggleColorMode } = useColorMode();
+	const [isOpen, setOpen] = useState(false);
 
 	return (
 		<Box
@@ -89,11 +93,25 @@ const Navbar = (props) => {
 						<Menu>
 							<MenuButton
 								as={IconButton}
-								icon={<HamburgerIcon />}
+								className={styles.menuButton}
+								icon={
+									<AnimatedMenuButton
+										isOpen={isOpen}
+										onClick={() => setOpen(!isOpen)}
+										strokeWidth="4"
+										color="#3399cc"
+										width="44"
+										height="24"
+									/>
+								}
 								variant="outline"
 								aria-label="Menu Options"
 							/>
-							<MenuList>
+							<MenuList
+								style={{ borderRadius: 0 }}
+								w="100vw"
+								onClick={() => setOpen(false)}
+							>
 								<NextLink href="/" passHref>
 									<MenuItem as={Link}>Home</MenuItem>
 								</NextLink>
