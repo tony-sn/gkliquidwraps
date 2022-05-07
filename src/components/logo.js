@@ -15,14 +15,6 @@ const LogoBox = styled.span`
 	img {
 		transition: 200ms ease;
 	}
-
-	&:hover img {
-		transform: rotate(20deg);
-	}
-
-	&:hover p {
-		color: #e53e3e;
-	}
 `;
 
 const Logo = () => {
@@ -36,7 +28,14 @@ const Logo = () => {
 						fontWeight="bold"
 						ml={3}
 					>
-						<span style={{ textTransform: "uppercase" }}>GK Liquid Wraps</span>
+						<span
+							style={{
+								textTransform: "uppercase",
+								color: `${useColorModeValue("#e55113", "#e53e3e")}`,
+							}}
+						>
+							GK Liquid Wraps
+						</span>
 					</Text>
 				</LogoBox>
 			</a>
