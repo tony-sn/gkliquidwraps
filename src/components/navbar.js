@@ -100,7 +100,7 @@ const Navbar = (props) => {
 										onClick={() => setOpen(!isOpen)}
 										strokeWidth="4"
 										color="#3399cc"
-										width="44"
+										width="48"
 										height="24"
 									/>
 								}
