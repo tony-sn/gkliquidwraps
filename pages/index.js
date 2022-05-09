@@ -6,16 +6,18 @@ import {
 	Container,
 	Heading,
 	Box,
-	Image,
+	Img,
 	Button,
 	List,
 	Icon,
 	useColorModeValue,
 	Center,
 	SimpleGrid,
+	AspectRatio,
 } from "@chakra-ui/react";
 
 import Layout from "components/layouts/article";
+import styles from "styles/global.module.css";
 
 export default function Home() {
 	return (
@@ -29,21 +31,16 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			{/* <main>
-				<h1>Welcome to GK Liquidwraps</h1>
-			</main> */}
-
+			<Img
+				src={`images/${useColorModeValue("baggedEuroCl9", "Lambo")}.jpg`}
+				w="100vw"
+				className={styles.banner}
+			/>
 			<Layout>
 				<Container maxW="container.xl">
-					<Box
-						borderRadius="lg"
-						bg={useColorModeValue("#88ccca", "red")}
-						p={3}
-						my={6}
-						textAlign="center"
-					>
-						<strong>The professional liquid wraps you can trust</strong>
-					</Box>
+					<h2 className={styles.slogan}>
+						The professional liquid wraps you can trust
+					</h2>
 				</Container>
 			</Layout>
 		</div>
