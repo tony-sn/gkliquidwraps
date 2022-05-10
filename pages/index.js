@@ -56,16 +56,16 @@ export default function Home() {
 						<br />
 
 						<div className={styles.paragraph}>
-							Ozwraps™ provides the best ​liquid spray wrap&nbsp;application
-							service in Australia since 2012 delivering an amazing service at
-							unbeatable costs. If you are looking to change or protect the
-							colour of your car and time is not on your side, we can&nbsp;dip
-							your car&nbsp;within 1 day in a matte or satin finish. Car dipping
-							is the process to spray wrap your vehicle with a removable paint.
-							Your vehicle original paint is 100% preserved and is not sanded or
-							touched in any ways except for washing. Once you decide to remove
-							the liquid spray wrap, your original paint has been preserved
-							looking brand new.
+							GK Liquidwraps™ provides the best ​liquid spray
+							wrap&nbsp;application service in Australia since 2012 delivering
+							an amazing service at unbeatable costs. If you are looking to
+							change or protect the colour of your car and time is not on your
+							side, we can&nbsp;dip your car&nbsp;within 1 day in a matte or
+							satin finish. Car dipping is the process to spray wrap your
+							vehicle with a removable paint. Your vehicle original paint is
+							100% preserved and is not sanded or touched in any ways except for
+							washing. Once you decide to remove the liquid spray wrap, your
+							original paint has been preserved looking brand new.
 							<br />
 							<br />
 							Our premium&nbsp;liquid wrap&nbsp;or liquid&nbsp;spray-on vinyl
