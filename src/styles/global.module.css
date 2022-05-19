@@ -10,6 +10,14 @@
 	text-align: justify;
 }
 
+.services {
+	height: 650px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
 @media screen and (max-width: 768px) {
 	.slogan {
 		font-size: 1.5rem;

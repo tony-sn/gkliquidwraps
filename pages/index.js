@@ -19,9 +19,22 @@ import {
 import About from "components/about";
 import Section from "components/section";
 import Layout from "components/layouts/article";
+import EmblaCarousel from "components/carousel/EmblaCarousel";
+
 import styles from "styles/global.module.css";
 
 export default function Home() {
+	const slides = [
+		{ content: "WHY LIQUID SPRAY WRAP?" },
+		{ content: "Our method is affordable & durable" },
+		{ content: "Liquid wrap protects your car paint and make it last longer" },
+		{
+			content: "Liquid wrap will increase the resale value",
+		},
+		{
+			content: "We can change the colour of your car within the same day",
+		},
+	];
 	return (
 		<div>
 			<Head>
@@ -34,17 +47,17 @@ export default function Home() {
 			</Head>
 
 			<Layout>
-				<Img
-					src={`images/${useColorModeValue("baggedEuroCl9", "Lambo")}.jpg`}
-					w="100vw"
-					className={styles.banner}
-				/>
 				<Container maxW="container.xl">
+					<Img
+						src={`images/${useColorModeValue("baggedEuroCl9", "Lambo")}.jpg`}
+						w="100%"
+						className={styles.banner}
+					/>
 					<h2 className={styles.slogan}>
 						The professional liquid wraps you can trust
 					</h2>
 
-					<Section>
+					<Section delay={0.1}>
 						<Heading as="h3" variant="section-title">
 							Automotive Liquid Spray Wraps from $650
 						</Heading>
@@ -58,6 +71,20 @@ export default function Home() {
 
 						<div className={styles.paragraph} id="about">
 							<About />​
+						</div>
+					</Section>
+
+					<Section delay={0.2}>
+						<div
+							className={styles.services}
+							style={{
+								backgroundImage: `url("/images/${useColorModeValue(
+									"baggedEuroCl9front",
+									"LamboFront"
+								)}.jpg")`,
+							}}
+						>
+							<EmblaCarousel slides={slides} />
 						</div>
 					</Section>
 				</Container>
