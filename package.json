@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "embla-carousel-autoplay": "^6.2.0",
+    "embla-carousel-react": "^6.2.0",
     "framer-motion": "^6",
     "next": "12.1.5",
     "react": "17.0.2",
