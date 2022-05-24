@@ -7,6 +7,7 @@ import {
 	Heading,
 	Box,
 	Img,
+	Image,
 	Button,
 	List,
 	Icon,
@@ -48,7 +49,7 @@ export default function Home() {
 
 			<Layout>
 				<Container maxW="container.xl">
-					<Img
+					<Image
 						src={`images/${useColorModeValue("baggedEuroCl9", "Lambo")}.jpg`}
 						w="100%"
 						className={styles.banner}
