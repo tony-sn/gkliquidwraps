@@ -7,7 +7,6 @@ import {
 	Heading,
 	Box,
 	Img,
-	Image,
 	Button,
 	List,
 	Icon,
@@ -16,6 +15,8 @@ import {
 	SimpleGrid,
 	AspectRatio,
 } from "@chakra-ui/react";
+
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 import About from "components/about";
 import Section from "components/section";
@@ -39,7 +40,7 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>GK Liquidwraps</title>
+				<title>GK Liquidwraps™</title>
 				<meta
 					name="description"
 					content="A liquid wrap professional based in Melbourne"
@@ -49,7 +50,7 @@ export default function Home() {
 
 			<Layout>
 				<Container maxW="container.xl">
-					<Image
+					<Img
 						src={`images/${useColorModeValue("baggedEuroCl9", "Lambo")}.jpg`}
 						w="100%"
 						className={styles.banner}
@@ -87,6 +88,72 @@ export default function Home() {
 						>
 							<EmblaCarousel slides={slides} />
 						</div>
+					</Section>
+
+					<Section delay={0.3}>
+						<Heading as="h1" textAlign="center" mb="5">
+							Gallery
+						</Heading>
+						<Center>
+							<SimpleGrid columns={[1, 1, 2]} gap={3}>
+								<Img
+									borderColor="whiteAlpha.800"
+									borderWidth={2}
+									borderStyle="none"
+									maxWidth="full"
+									display="inline-block"
+									borderRadius="lg"
+									src="/images/renault-matte-dark-gold-car-wrap-australia_orig.jpg"
+									alt="renault matte dark gold"
+									id="renaultmattedarkgold"
+								/>
+								<Img
+									borderColor="whiteAlpha.800"
+									borderWidth={2}
+									borderStyle="none"
+									maxWidth="full"
+									display="inline-block"
+									borderRadius="lg"
+									src="/images/bmw-matte-gunmetal-grey-matte-car-wrap_orig.jpg"
+									alt="bmw matte gunmetal grey"
+									id="bmwmattegunmetalgrey"
+								/>
+								<Img
+									borderColor="whiteAlpha.800"
+									borderWidth={2}
+									borderStyle="none"
+									maxWidth="full"
+									display="inline-block"
+									borderRadius="lg"
+									src="/images/nissan-matte-grey-car-wrap_orig.jpg"
+									alt="nissan matte grey"
+									id="nissanmattegrey"
+								/>
+								<Img
+									borderColor="whiteAlpha.800"
+									borderWidth={2}
+									borderStyle="none"
+									maxWidth="full"
+									display="inline-block"
+									borderRadius="lg"
+									src="/images/bmw-matte-yellow-wrap_orig.jpg"
+									alt="bmw matte yellow"
+									id="bmwmatteyellow"
+								/>
+							</SimpleGrid>
+						</Center>
+						<Center>
+							<Box align={"justify"} my={6} mx={2}>
+								<NextLink href="/gallery">
+									<Button
+										rightIcon={<ChevronRightIcon />}
+										colorScheme={useColorModeValue("orange", "red")}
+									>
+										View More
+									</Button>
+								</NextLink>
+							</Box>
+						</Center>
 					</Section>
 				</Container>
 			</Layout>
