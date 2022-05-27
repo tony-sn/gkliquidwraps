@@ -4,6 +4,7 @@ import Layout from "components/layouts/main";
 import Fonts from "components/fonts";
 import theme from "theme";
 import "styles/embla.css";
+import "styles/myEmbla.css";
 
 function MyApp({ Component, pageProps, router }) {
 	return (

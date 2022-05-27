@@ -98,10 +98,12 @@ const Navbar = (props) => {
 									<AnimatedMenuButton
 										isOpen={isOpen}
 										onClick={() => setOpen(!isOpen)}
-										strokeWidth="4"
-										color="#3399cc"
+										strokeWidth="6"
+										color="#ff6666"
+										lineProps={{ strokeLinecap: "round" }}
+										transition={{ type: "spring", stiffness: 260, damping: 20 }}
 										width="48"
-										height="24"
+										height="18"
 									/>
 								}
 								variant="outline"

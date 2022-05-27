@@ -49,8 +49,16 @@ const EmblaCarousel = ({ slides }) => {
 					))}
 				</div>
 			</div>
-			<PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-			<NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+			<PrevButton
+				onClick={scrollPrev}
+				enabled={prevBtnEnabled}
+				fillColor={useColorModeValue("#dd6b20", "rgb(229, 62, 62)")}
+			/>
+			<NextButton
+				onClick={scrollNext}
+				enabled={nextBtnEnabled}
+				fillColor={useColorModeValue("#dd6b20", "rgb(229, 62, 62)")}
+			/>
 		</div>
 	);
 };
