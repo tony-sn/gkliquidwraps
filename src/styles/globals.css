@@ -1,0 +1,9 @@
+.care-maintenance ul {
+	padding-left: 3em;
+}
+
+.care-maintenance ul li {
+	padding-left: 5px;
+	line-height: 2;
+	text-align: justify;
+}

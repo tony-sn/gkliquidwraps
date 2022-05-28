@@ -22,7 +22,7 @@ const Gallery = () => {
 			</Center>
 
 			<SimpleGrid columns={[1, 1, 2]} gap={3}>
-				<Section delay={0.3}>
+				<Section delay={0.2}>
 					<GalleryGridItem
 						id={"bmw-gunmetal"}
 						title={"bmw-gunmetal"}
