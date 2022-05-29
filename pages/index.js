@@ -9,14 +9,16 @@ import {
 	Img,
 	Button,
 	List,
-	Icon,
 	useColorModeValue,
 	Center,
 	SimpleGrid,
 	AspectRatio,
+	Stack,
 } from "@chakra-ui/react";
 
 import { ChevronRightIcon } from "@chakra-ui/icons";
+
+import MySvg from "components/svg";
 
 import About from "components/about";
 import Section from "components/section";
@@ -143,7 +145,7 @@ export default function Home() {
 							</SimpleGrid>
 						</Center>
 						<Center>
-							<Box align={"justify"} my={6} mx={2}>
+							<Box align={"justify"} my={6} mx={2} mb={0}>
 								<NextLink href="/gallery">
 									<Button
 										rightIcon={<ChevronRightIcon />}
@@ -154,6 +156,27 @@ export default function Home() {
 								</NextLink>
 							</Box>
 						</Center>
+					</Section>
+
+					<Section delay={0.4}>
+						<Heading
+							as="h1"
+							textTransform={"uppercase"}
+							textAlign="center"
+							className="works-section-heading"
+						>
+							Our Process
+						</Heading>
+
+						<Stack
+							direction={{ base: "column", md: "row" }}
+							textAlign="center"
+							flexGrow={1}
+							className="works-section-stack"
+						>
+							{/* custom svg color */}
+							<MySvg />
+						</Stack>
 					</Section>
 				</Container>
 			</Layout>

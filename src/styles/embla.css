@@ -61,7 +61,7 @@
 	background-color: transparent;
 	touch-action: manipulation;
 	position: absolute;
-	z-index: 1;
+	/* z-index: 1; */
 	top: 50%;
 	transform: translateY(-50%);
 	border: 0;
