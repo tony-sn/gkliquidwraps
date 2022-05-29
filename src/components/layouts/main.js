@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Box, Container, Img, useColorModeValue } from "@chakra-ui/react";
 
 import Navbar from "../navbar";
+import Footer from "../footer";
 
 const Main = ({ children, router }) => {
 	return (
@@ -32,7 +33,7 @@ const Main = ({ children, router }) => {
 			<Container maxW="container.xl" pt={14}>
 				{children}
 
-				{/* <Footer /> */}
+				<Footer />
 			</Container>
 		</Box>
 	);

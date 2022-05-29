@@ -22,7 +22,7 @@ import ThemeSwitcher from "./themeSwitcher";
 import AnimatedMenuButton from "./menuButton";
 import styles from "@styles/Button";
 
-const LinkItem = ({ href, path, children }) => {
+export const LinkItem = ({ href, path, children }) => {
 	const active = path === href;
 	const inactiveColor = useColorModeValue("gray.900", "whiteAlpha.900");
 	return (

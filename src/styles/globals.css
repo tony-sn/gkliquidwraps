@@ -7,3 +7,15 @@
 	line-height: 2;
 	text-align: justify;
 }
+
+h1.works-section-heading {
+	margin: 0 auto 30px;
+}
+
+.works-section-stack svg {
+	margin-bottom: 10px;
+}
+
+.works-section-stack p {
+	margin: 0 auto 30px;
+}
