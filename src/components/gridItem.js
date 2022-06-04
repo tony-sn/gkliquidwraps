@@ -44,7 +44,6 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 
 export const GalleryGridItem = ({ title, thumbnail }) => (
 	<Box w="100%" textAlign="center">
-		{/* <NextLink href={`/gallery/${id}`}> */}
 		<LinkBox cursor="pointer">
 			<Image
 				src={thumbnail}
@@ -53,14 +52,7 @@ export const GalleryGridItem = ({ title, thumbnail }) => (
 				placeholder="blur"
 				style={{ borderRadius: "6px" }}
 			/>
-			{/* <LinkOverlay href={`/gallery/${id}`} /> */}
-			{/* <LinkOverlay href={`/works/${id}`}>
-				<Text mt={2} fontSize={20}>
-					{title}
-				</Text>
-			</LinkOverlay> */}
 		</LinkBox>
-		{/* </NextLink> */}
 	</Box>
 );
 
