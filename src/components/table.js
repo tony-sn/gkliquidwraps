@@ -100,9 +100,9 @@ const group4 = [
 ];
 
 const ticketPrice = {
-	Children: 40,
-	Adult: 65,
-	Concession: 50,
+	Children: 44,
+	Adult: 71.5,
+	Concession: 55,
 	Infant: "",
 };
 
@@ -217,9 +217,9 @@ const MyTable = () => {
 				</Tbody>
 				<Tfoot>
 					<Tr>
-						<Th>Total: ${Math.round(totalAfterSurcharge() / 1.1)}</Th>
+						<Th>Total: $860</Th>
 						<Th>Plus 10%</Th>
-						<Th isNumeric>${totalAfterSurcharge()}</Th>
+						<Th isNumeric>${Math.round(totalAfterSurcharge() / 1.1)}</Th>
 					</Tr>
 				</Tfoot>
 			</Table>
