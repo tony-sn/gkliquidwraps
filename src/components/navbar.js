@@ -80,7 +80,8 @@ const Navbar = (props) => {
 					<LinkItem href="/care">Care</LinkItem>
 					<LinkItem href="/gallery">Gallery</LinkItem>
 					<LinkItem href="/colours">Colours</LinkItem>
-					<LinkItem href="/pricing">Pricing</LinkItem>
+					{/* <LinkItem href="/pricing">Pricing</LinkItem> */}
+					<LinkItem href="/penisula">Penisula</LinkItem>
 					<LinkItem href="/contact">Contact</LinkItem>
 				</Stack>
 
