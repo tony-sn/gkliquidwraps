@@ -106,6 +106,18 @@ const ticketPrice = {
 	Infant: "",
 };
 
+function GroupRendering({ group }) {
+	return group.map((member, index) => (
+		<Tr key={index}>
+			<Td>
+				{member.index}. {member.name}
+			</Td>
+			<Td>{member.type}</Td>
+			<Td isNumeric>{ticketPrice[member.type]}</Td>
+		</Tr>
+	));
+}
+
 const MyTable = () => {
 	function groupTotal(group) {
 		let total = 0;
@@ -150,15 +162,8 @@ const MyTable = () => {
 							<strong>{groupTotal(group1)}</strong>
 						</Td>
 					</Tr>
-					{group1.map((member, index) => (
-						<Tr key={index}>
-							<Td>
-								{member.index}. {member.name}
-							</Td>
-							<Td>{member.type}</Td>
-							<Td isNumeric>{ticketPrice[member.type]}</Td>
-						</Tr>
-					))}
+
+					<GroupRendering group={group1} />
 
 					<Tr>
 						<Td>
@@ -169,15 +174,8 @@ const MyTable = () => {
 							<strong>{groupTotal(group2)}</strong>
 						</Td>
 					</Tr>
-					{group2.map((member, index) => (
-						<Tr key={index}>
-							<Td>
-								{member.index}. {member.name}
-							</Td>
-							<Td>{member.type}</Td>
-							<Td isNumeric>{ticketPrice[member.type]}</Td>
-						</Tr>
-					))}
+					<GroupRendering group={group2} />
+
 					<Tr>
 						<Td>
 							<strong>Group 3</strong>
@@ -187,15 +185,9 @@ const MyTable = () => {
 							<strong>{groupTotal(group3)}</strong>
 						</Td>
 					</Tr>
-					{group3.map((member, index) => (
-						<Tr key={index}>
-							<Td>
-								{member.index}. {member.name}
-							</Td>
-							<Td>{member.type}</Td>
-							<Td isNumeric>{ticketPrice[member.type]}</Td>
-						</Tr>
-					))}
+
+					<GroupRendering group={group3} />
+
 					<Tr>
 						<Td>
 							<strong>Group 4</strong>
@@ -205,15 +197,8 @@ const MyTable = () => {
 							<strong>{groupTotal(group4)}</strong>
 						</Td>
 					</Tr>
-					{group4.map((member, index) => (
-						<Tr key={index}>
-							<Td>
-								{member.index}. {member.name}
-							</Td>
-							<Td>{member.type}</Td>
-							<Td isNumeric>{ticketPrice[member.type]}</Td>
-						</Tr>
-					))}
+
+					<GroupRendering group={group4} />
 				</Tbody>
 				<Tfoot>
 					<Tr>

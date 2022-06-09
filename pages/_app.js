@@ -9,7 +9,7 @@ import "styles/globals.css";
 
 function MyApp({ Component, pageProps, router }) {
 	return (
-		<ChakraProvider theme={theme}>
+		<ChakraProvider theme={theme} resetCSS={true}>
 			<Layout router={router}>
 				<Fonts />
 				<Component {...pageProps} />
