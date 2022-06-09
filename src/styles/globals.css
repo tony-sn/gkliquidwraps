@@ -19,3 +19,16 @@ h1.works-section-heading {
 .works-section-stack p {
 	margin: 0 auto 30px;
 }
+
+ul.ul-pricing li {
+	list-style: disc outside;
+	margin-left: 1rem;
+	margin-top: 3px;
+}
+
+p.paragraph-note {
+	font-size: 0.875rem;
+	font-style: italic;
+	text-align: justify;
+	padding-bottom: 3rem;
+}

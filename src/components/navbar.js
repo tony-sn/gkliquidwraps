@@ -80,8 +80,8 @@ const Navbar = (props) => {
 					<LinkItem href="/care">Care</LinkItem>
 					<LinkItem href="/gallery">Gallery</LinkItem>
 					<LinkItem href="/colours">Colours</LinkItem>
-					{/* <LinkItem href="/pricing">Pricing</LinkItem> */}
-					<LinkItem href="/penisula">Penisula</LinkItem>
+					<LinkItem href="/pricing">Pricing</LinkItem>
+					{/* <LinkItem href="/penisula">Penisula</LinkItem> */}
 					<LinkItem href="/contact">Contact</LinkItem>
 				</Stack>
 
@@ -127,12 +127,12 @@ const Navbar = (props) => {
 								<NextLink href="/colours" passHref>
 									<MenuItem as={Link}>Colours</MenuItem>
 								</NextLink>
-								{/* <NextLink href="/pricing" passHref>
+								<NextLink href="/pricing" passHref>
 									<MenuItem as={Link}>Pricing</MenuItem>
-								</NextLink> */}
-								<NextLink href="/penisula" passHref>
-									<MenuItem as={Link}>Penisula</MenuItem>
 								</NextLink>
+								{/* <NextLink href="/penisula" passHref>
+									<MenuItem as={Link}>Penisula</MenuItem>
+								</NextLink> */}
 								<NextLink href="/contact" passHref>
 									<MenuItem as={Link}>Contact</MenuItem>
 								</NextLink>

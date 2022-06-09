@@ -6,7 +6,6 @@ import { GalleryGridItem } from "components/gridItem";
 import { colours } from "../public/images";
 
 const Colours = () => {
-	console.log(colours);
 	return (
 		<>
 			<Container maxW="container.xl">

@@ -21,7 +21,8 @@ const Footer = () => {
 			>
 				<LinkItem href="/">Home</LinkItem>
 				<LinkItem href="/care">Care</LinkItem>
-				<LinkItem href="/penisula">Penisula</LinkItem>
+				<LinkItem href="/pricing">Pricing</LinkItem>
+				<LinkItem href="/penisula">Our Team</LinkItem>
 				<LinkItem href="/contact">Contact</LinkItem>
 			</Stack>
 			<Box align="center" fontSize={"sm"} opacity={0.4} mt={4}>
