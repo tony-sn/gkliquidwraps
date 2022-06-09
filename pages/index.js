@@ -83,7 +83,7 @@ export default function Home() {
 							className={styles.services}
 							style={{
 								backgroundImage: `url("/images/${useColorModeValue(
-									"baggedEuroCl9front",
+									"baggedEuroCl9Front",
 									"LamboFront"
 								)}.jpg")`,
 							}}
