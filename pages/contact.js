@@ -44,7 +44,7 @@ const Contact = () => {
 							<Textarea h="100px" w="100%" variant={"filled"} />
 							<Box>
 								<Link
-                  							href="https://www.facebook.com/phosac14072019/"
+                  							href="mailto: kiennguyenpro1304@gmail.com"
                   							target="_blank"
                 						>
 								<Button 
