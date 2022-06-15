@@ -12,6 +12,7 @@ import {
 	Box,
 	Img,
 	Button,
+	Link
 } from "@chakra-ui/react";
 
 import Section from "components/section";
@@ -47,8 +48,7 @@ const Contact = () => {
                   							href="mailto: kiennguyenpro1304@gmail.com"
                   							target="_blank"
                 						>
-								<Button 
-									variant="ghost"
+								<Button variant="ghost"
                     							colorScheme="purple"
                     							align="center">
 								Submit
