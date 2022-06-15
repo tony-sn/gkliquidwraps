@@ -11,6 +11,7 @@ import {
 	SimpleGrid,
 	Box,
 	Img,
+	Button,
 } from "@chakra-ui/react";
 
 import Section from "components/section";
@@ -41,6 +42,19 @@ const Contact = () => {
 							<Input id="email" placeholder="johndoe@gmail.com" isRequired />
 							<FormLabel htmlFor="comment">Comment</FormLabel>
 							<Textarea h="100px" w="100%" variant={"filled"} />
+							<Box>
+								<Link
+                  							href="https://www.facebook.com/phosac14072019/"
+                  							target="_blank"
+                						>
+								<Button 
+									variant="ghost"
+                    							colorScheme="purple"
+                    							align="center">
+								Submit
+								</Button>
+								</Link>
+							</Box>
 						</FormControl>
 						<Container>
 							<Box>
