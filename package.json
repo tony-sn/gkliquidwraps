@@ -1,42 +1,46 @@
 {
-  "name": "gkliquidwraps",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "rm -rf .next && next build",
-    "start": "next start",
-    "lint": "next lint",
-    "pretty-quick": "pretty-quick"
-  },
-  "dependencies": {
-    "@chakra-ui/icons": "^1.1.7",
-    "@chakra-ui/react": "^1.8.8",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "embla-carousel-autoplay": "^6.2.0",
-    "embla-carousel-react": "^6.2.0",
-    "framer-motion": "^6",
-    "husky": "^8.0.1",
-    "next": "12.1.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "eslint": "8.14.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "12.1.5",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "prettier": "^2.7.1",
-    "pretty-quick": "^3.1.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pretty-quick --staged && git add .",
-      "...": "..."
-    }
-  }
+	"name": "gkliquidwraps",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "rm -rf .next && next build",
+		"start": "next start",
+		"lint": "next lint",
+		"pretty-quick": "pretty-quick",
+		"postinstall": "husky install",
+		"prepack": "pinst --disable",
+		"postpack": "pinst --enable"
+	},
+	"dependencies": {
+		"@chakra-ui/icons": "^1.1.7",
+		"@chakra-ui/react": "^1.8.8",
+		"@emotion/react": "^11",
+		"@emotion/styled": "^11",
+		"embla-carousel-autoplay": "^6.2.0",
+		"embla-carousel-react": "^6.2.0",
+		"framer-motion": "^6",
+		"next": "12.1.5",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"devDependencies": {
+		"eslint": "8.14.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-next": "12.1.5",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-react": "^7.30.0",
+		"eslint-plugin-react-hooks": "^4.5.0",
+		"husky": "^8.0.1",
+		"pinst": "^3.0.0",
+		"prettier": "^2.7.1",
+		"pretty-quick": "^3.1.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn pretty-quick --staged && git add .",
+			"...": "..."
+		}
+	}
 }
