@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a landing page demo for a car liquid wrap service.
+
+## Objectives:
+
+- Present to prospect clients about landing pages and sites.
+- Practice Next.js framework with built-in router and API.
+
+## Technologies:
+
+- Next.js: 12.1.5
+- React: 17.0.2
+- Chakra-UI: 1.8.8
+- Chakra-Icon: 1.1.7
+- Styled Emotion: 11
+- Framer Motion: 6
+- Embla Carousel: 6.2.0
+- ESLint styles: airbnb
+- Husky: 8.0.1
 
 ## Getting Started
 
@@ -12,23 +29,28 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Build
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Project can be built manually:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run build
+# or
+yarn run build
+```
 
-## Learn More
+then drag and drop the build folder to Vercel, Netlify, GitHub Page etc.
 
-To learn more about Next.js, take a look at the following resources:
+or upload directly to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project is deployed on [Vercel](https://gkliquidwraps.vercel.app), as the convenience of CI/CD from Vercel server.
 
-## Deploy on Vercel
+## Improvement needs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Testing
+- API setup
+- Code Splitting: add constants
+- JSDoc
+- PropTypes
