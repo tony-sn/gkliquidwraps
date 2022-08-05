@@ -41,7 +41,7 @@ yarn run build
 
 then drag and drop the build folder to Vercel, Netlify, GitHub Page etc.
 
-or upload directly to Vercel
+or deploy directly to Vercel via GitHub which will benefit with CI/CD, as every change from your branch will rebuild the site
 
 ## Deployment
 

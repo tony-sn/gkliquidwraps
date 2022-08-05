@@ -1,13 +1,13 @@
-import { Container, Heading, Center } from "@chakra-ui/react";
+import { Container, Heading, Center } from '@chakra-ui/react'
 
-import Section from "components/section";
-import Paragraph from "components/paragraph";
+import Section from 'components/section'
+import Paragraph from 'components/paragraph'
 
 const Care = () => (
 	<Container maxW="container.xl" className="care-maintenance">
 		<Center>
 			<Heading as="h3" fontSize={20} mb={6}>
-				Liquid Spray Wrap Maintenance & Care
+				Liquid Spray Wrap Maintenance &amp; Care
 			</Heading>
 		</Center>
 
@@ -15,7 +15,7 @@ const Care = () => (
 			<Heading
 				as="h3"
 				variant="section-title"
-				sx={{ textTransform: "uppercase" }}
+				sx={{ textTransform: 'uppercase' }}
 			>
 				​Liquid Spray Wrap Aftercare
 			</Heading>
@@ -38,7 +38,7 @@ const Care = () => (
 			<Paragraph>
 				Bird drops and fuel spills should be rinsed as soon as possible to avoid
 				stains. The car will need to be kept clean and dust free. A weekly wash
-				or whenever it gets dirty, it's fine.
+				or whenever it gets dirty, it&apos;s fine.
 			</Paragraph>
 			<br />
 			<br />
@@ -61,6 +61,6 @@ const Care = () => (
 			</ul>
 		</Section>
 	</Container>
-);
+)
 
-export default Care;
+export default Care

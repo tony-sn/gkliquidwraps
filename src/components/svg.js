@@ -1,11 +1,12 @@
-import { Box, Icon, useColorModeValue } from "@chakra-ui/react";
+import { Box, Icon, useColorModeValue } from '@chakra-ui/react'
+
 const MySvg = () => {
-	const fillColor = `url(#my-gradient-${useColorModeValue("light", "dark")})`;
+	const fillColor = `url(#my-gradient-${useColorModeValue('light', 'dark')})`
 
 	return (
 		<>
 			<svg
-				style={{ width: 0, height: 0, position: "absolute" }}
+				style={{ width: 0, height: 0, position: 'absolute' }}
 				aria-hidden="true"
 				focusable="false"
 			>
@@ -16,7 +17,7 @@ const MySvg = () => {
 				</linearGradient>
 			</svg>
 			<svg
-				style={{ width: 0, height: 0, position: "absolute" }}
+				style={{ width: 0, height: 0, position: 'absolute' }}
 				aria-hidden="true"
 				focusable="false"
 			>
@@ -67,11 +68,12 @@ const MySvg = () => {
 				</Icon>
 				<p>
 					Bring your vehicle in the morning and within the same day you can
-					collect and enjoy your vehicle. It's time to go for a winning ride.
+					collect and enjoy your vehicle. It&apos;s time to go for a winning
+					ride.
 				</p>
 			</Box>
 		</>
-	);
-};
+	)
+}
 
-export default MySvg;
+export default MySvg

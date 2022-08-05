@@ -46,6 +46,6 @@ const About = () => (
 		and&nbsp;<strong>increase your resale value</strong>&nbsp;or if you want to
 		make look the old faded paint brand new!&nbsp;
 	</>
-);
+)
 
-export default About;
+export default About

@@ -1,44 +1,41 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import NextLink from "next/link";
+import NextLink from 'next/link'
 import {
-	Link,
+	Box,
+	Button,
+	Center,
 	Container,
 	Heading,
-	Box,
 	Img,
-	Button,
-	List,
-	useColorModeValue,
-	Center,
 	SimpleGrid,
-	AspectRatio,
 	Stack,
-} from "@chakra-ui/react";
+	useColorModeValue,
+} from '@chakra-ui/react'
 
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
-import MySvg from "components/svg";
+import MySvg from 'components/svg'
 
-import About from "components/about";
-import Section from "components/section";
-import Layout from "components/layouts/article";
-import EmblaCarousel from "components/carousel/EmblaCarousel";
+import About from 'components/about'
+import Section from 'components/section'
+import Layout from 'components/layouts/article'
+import EmblaCarousel from 'components/carousel/EmblaCarousel'
 
-import styles from "styles/global.module.css";
+import styles from 'styles/global.module.css'
 
 export default function Home() {
 	const slides = [
-		{ content: "WHY LIQUID SPRAY WRAP?" },
-		{ content: "Our method is affordable & durable" },
-		{ content: "Liquid wrap protects your car paint and make it last longer" },
+		{ content: 'WHY LIQUID SPRAY WRAP?' },
+		{ content: 'Our method is affordable & durable' },
+		{ content: 'Liquid wrap protects your car paint and make it last longer' },
 		{
-			content: "Liquid wrap will increase the resale value",
+			content: 'Liquid wrap will increase the resale value',
 		},
 		{
-			content: "We can change the colour of your car within the same day",
+			content: 'We can change the colour of your car within the same day',
 		},
-	];
+	]
 	return (
 		<div>
 			<Head>
@@ -53,7 +50,7 @@ export default function Home() {
 			<Layout>
 				<Container maxW="container.xl">
 					<Img
-						src={`images/${useColorModeValue("baggedEuroCl9", "Lambo")}.jpg`}
+						src={`images/${useColorModeValue('baggedEuroCl9', 'Lambo')}.jpg`}
 						w="100%"
 						className={styles.banner}
 					/>
@@ -83,8 +80,8 @@ export default function Home() {
 							className={styles.services}
 							style={{
 								backgroundImage: `url("/images/${useColorModeValue(
-									"baggedEuroCl9Front",
-									"LamboFront"
+									'baggedEuroCl9Front',
+									'LamboFront',
 								)}.jpg")`,
 							}}
 						>
@@ -145,11 +142,11 @@ export default function Home() {
 							</SimpleGrid>
 						</Center>
 						<Center>
-							<Box align={"justify"} my={6} mx={2} mb={0}>
-								<NextLink href="/gallery">
+							<Box align="justify" my={6} mx={2} mb={0}>
+								<NextLink href="/gallery" passHref>
 									<Button
 										rightIcon={<ChevronRightIcon />}
-										colorScheme={useColorModeValue("orange", "red")}
+										colorScheme={useColorModeValue('orange', 'red')}
 									>
 										View More
 									</Button>
@@ -161,7 +158,7 @@ export default function Home() {
 					<Section delay={0.4}>
 						<Heading
 							as="h1"
-							textTransform={"uppercase"}
+							textTransform="uppercase"
 							textAlign="center"
 							className="works-section-heading"
 						>
@@ -169,7 +166,7 @@ export default function Home() {
 						</Heading>
 
 						<Stack
-							direction={{ base: "column", md: "row" }}
+							direction={{ base: 'column', md: 'row' }}
 							textAlign="center"
 							flexGrow={1}
 							className="works-section-stack"
@@ -181,5 +178,5 @@ export default function Home() {
 				</Container>
 			</Layout>
 		</div>
-	);
+	)
 }

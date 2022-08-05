@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useColorModeValue, Text } from "@chakra-ui/react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import React, { useState, useEffect, useCallback } from 'react'
+import { useColorModeValue, Text } from '@chakra-ui/react'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
-import { PrevButton, NextButton } from "./EmblaCarouselButton";
+import { PrevButton, NextButton } from './EmblaCarouselButton'
 
 const EmblaCarousel = ({ slides }) => {
 	const [viewportRef, embla] = useEmblaCarousel(
@@ -11,26 +11,26 @@ const EmblaCarousel = ({ slides }) => {
 			loop: true,
 			skipSnaps: false,
 		},
-		[Autoplay()]
-	);
+		[Autoplay()],
+	)
 
-	const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-	const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+	const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
+	const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
 
-	const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
-	const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+	const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
+	const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
 
 	const onSelect = useCallback(() => {
-		if (!embla) return;
-		setPrevBtnEnabled(embla.canScrollPrev());
-		setNextBtnEnabled(embla.canScrollNext());
-	}, [embla]);
+		if (!embla) return
+		setPrevBtnEnabled(embla.canScrollPrev())
+		setNextBtnEnabled(embla.canScrollNext())
+	}, [embla])
 
 	useEffect(() => {
-		if (!embla) return;
-		embla.on("select", onSelect);
-		onSelect();
-	}, [embla, onSelect]);
+		if (!embla) return
+		embla.on('select', onSelect)
+		onSelect()
+	}, [embla, onSelect])
 
 	return (
 		<div className="embla">
@@ -40,7 +40,7 @@ const EmblaCarousel = ({ slides }) => {
 						<div className="embla__slide" key={index}>
 							<div className="embla__slide__inner">
 								<Text
-									color={useColorModeValue("whiteAlpha.800", "whiteAlpha.900")}
+									color={useColorModeValue('whiteAlpha.800', 'whiteAlpha.900')}
 								>
 									{slide.content}
 								</Text>
@@ -52,15 +52,15 @@ const EmblaCarousel = ({ slides }) => {
 			<PrevButton
 				onClick={scrollPrev}
 				enabled={prevBtnEnabled}
-				fillColor={useColorModeValue("#dd6b20", "rgb(229, 62, 62)")}
+				fillColor={useColorModeValue('#dd6b20', 'rgb(229, 62, 62)')}
 			/>
 			<NextButton
 				onClick={scrollNext}
 				enabled={nextBtnEnabled}
-				fillColor={useColorModeValue("#dd6b20", "rgb(229, 62, 62)")}
+				fillColor={useColorModeValue('#dd6b20', 'rgb(229, 62, 62)')}
 			/>
 		</div>
-	);
-};
+	)
+}
 
-export default EmblaCarousel;
+export default EmblaCarousel

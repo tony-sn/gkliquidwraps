@@ -1,16 +1,16 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
 const AnimatedMenuButton = ({
 	isOpen = false,
 	width = 24,
 	height = 24,
 	strokeWidth = 1,
-	color = "#000",
+	color = '#000',
 	transition = null,
-	lineProps = null,
+	lineProps,
 	...props
 }) => {
-	const variant = isOpen ? "opened" : "closed";
+	const variant = isOpen ? 'opened' : 'closed'
 	const top = {
 		closed: {
 			rotate: 0,
@@ -20,7 +20,7 @@ const AnimatedMenuButton = ({
 			rotate: 45,
 			translateY: 2,
 		},
-	};
+	}
 	const center = {
 		closed: {
 			opacity: 1,
@@ -28,7 +28,7 @@ const AnimatedMenuButton = ({
 		opened: {
 			opacity: 0,
 		},
-	};
+	}
 	const bottom = {
 		closed: {
 			rotate: 0,
@@ -38,18 +38,18 @@ const AnimatedMenuButton = ({
 			rotate: -45,
 			translateY: -2,
 		},
-	};
-	lineProps = {
+	}
+	const newLineProps = {
 		stroke: color,
 		strokeWidth: Number(strokeWidth),
-		vectorEffect: "non-scaling-stroke",
-		initial: "closed",
+		vectorEffect: 'non-scaling-stroke',
+		initial: 'closed',
 		animate: variant,
 		transition,
 		...lineProps,
-	};
-	const unitHeight = 4;
-	const unitWidth = (unitHeight * Number(width)) / Number(height);
+	}
+	const unitHeight = 4
+	const unitWidth = (unitHeight * Number(width)) / Number(height)
 
 	return (
 		<motion.svg
@@ -66,7 +66,7 @@ const AnimatedMenuButton = ({
 				y1="0"
 				y2="0"
 				variants={top}
-				{...lineProps}
+				{...newLineProps}
 			/>
 			<motion.line
 				x1="0"
@@ -74,7 +74,7 @@ const AnimatedMenuButton = ({
 				y1="2"
 				y2="2"
 				variants={center}
-				{...lineProps}
+				{...newLineProps}
 			/>
 			<motion.line
 				x1="0"
@@ -82,10 +82,10 @@ const AnimatedMenuButton = ({
 				y1="4"
 				y2="4"
 				variants={bottom}
-				{...lineProps}
+				{...newLineProps}
 			/>
 		</motion.svg>
-	);
-};
+	)
+}
 
-export default AnimatedMenuButton;
+export default AnimatedMenuButton
